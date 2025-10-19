@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-font-family: Arial, sans-serif;
+font-family: "Poppins", sans-serif;
 background-color: #f0f0f0;
 display: flex;
 justify-content: center;
@@ -47,22 +49,42 @@ border-radius: 4px;
 
 
 button {
-align-content: center;
-width: 40%;
-padding: 10px;
-margin-left: 28%;
-background-color: violet;
-border: none;
-color: white;
-font-size: 16px;
-border-radius: 4px;
-cursor: pointer;
+  width: 45%;
+  padding: 10px;
+  margin-left: 27%;
+  background: linear-gradient(135deg, #a66cff, #c299ff);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+button:hover::before {
+  left: 120%;
+}
 
 button:hover {
-background-color: #3f2881;
+  background: linear-gradient(135deg, #9b59b6, #6c5ce7);
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
+  transform: scale(1.05);
 }
+
 
 
 p {
