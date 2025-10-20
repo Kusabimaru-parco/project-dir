@@ -1,37 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f0f0f0;
+  background: url("https://manybackgrounds.com/images/hd/giant-stars-4k-space-q03wbnsie2ul47hh.jpg") no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Gradient overlay for mood */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(166, 108, 255, 0.3), rgba(0, 0, 0, 0.8));
+  z-index: 0;
+}
+
+/* Moving star layers */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 
+    100px 200px white, 300px 400px white, 600px 800px white,
+    900px 1200px white, 1200px 700px white, 1600px 500px white;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+}
+
+.stars2 {
+  box-shadow: 
+    200px 100px white, 400px 600px white, 800px 900px white,
+    1100px 300px white, 1400px 1100px white;
+  animation: moveStars 100s linear infinite;
+  opacity: 0.6;
+}
+
+.stars3 {
+  box-shadow: 
+    150px 500px white, 500px 300px white, 700px 1000px white,
+    1000px 800px white, 1300px 200px white;
+  animation: moveStars 150s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-1000px); }
+}
+
+/* Login box */
 .login-box {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px 25px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  width: 300px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  width: 320px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #cfcfcf;
+  color: #fff;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #cfcfcf;
+  color: #eee;
 }
 
 input[type="text"], input[type="password"] {
@@ -42,10 +93,9 @@ input[type="text"], input[type="password"] {
   border-radius: 4px;
   outline: none;
   background: rgba(255, 255, 255, 0.2);
-  color: #333;
+  color: #fff;
   transition: all 0.3s ease;
 }
-
 
 input[type="text"]:focus, input[type="password"]:focus {
   border: 1px solid #a66cff; 
@@ -94,10 +144,11 @@ p {
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
+  color: #ddd;
 }
 
 a {
-  color: violet;
+  color: #c299ff;
   text-decoration: none;
 }
 
