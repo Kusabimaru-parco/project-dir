@@ -24,23 +24,26 @@ body {
   padding: 40px 35px;
   width: 350px;
   text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 h2 {
-  color: #fff;
-  margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #cfcfcf;
 }
 
 .register-container input {
   width: 100%;
   padding: 10px 15px;
   margin: 10px 0;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
   background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color:  #333;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .register-container input::placeholder {
@@ -53,12 +56,30 @@ h2 {
   margin-top: 15px;
   border: none;
   border-radius: 8px;
-  background: #b56cfb;
+  background: linear-gradient(135deg, #a66cff, #c299ff);
   color: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+button:hover::before {
+  left: 120%;
 }
 
 .register-container button:hover {
