@@ -21,5 +21,5 @@ def register():
     return render_template('register.html')
 
 if __name__ == "__main__":
-    port = int(os.getenv('PORT', 5500))
+    port = int(os.getenv('PORT', 3306))
     app.run(debug=True)
