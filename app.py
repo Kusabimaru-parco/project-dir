@@ -1,9 +1,11 @@
 from flask import Flask, render_template
 from dotenv import load_dotenv
+from config import Config
 import os
 
 load_dotenv()
 app = Flask(__name__)
+app.config.from_object(Config)
 
 @app.route('/')
 def index():
