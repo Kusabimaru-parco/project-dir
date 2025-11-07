@@ -10,7 +10,7 @@ class User(db.Model):
     lname = db.Column(db.String(50))
     username = db.Column(db.String(50), unique=True)
     email = db.Column(db.String(120), unique=True)
-    pass_word = db.Column(db.String(128))
+    pass_word = db.Column(db.String(512))
     birthday = db.Column(db.Date)
     gender = db.Column(db.String(10))
     phonenumber = db.Column(db.String(20))
