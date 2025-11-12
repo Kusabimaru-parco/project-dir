@@ -27,7 +27,7 @@ def create_database_if_not_exists():
         )
         cur = conn.cursor()
         cur.execute(
-            f"CREATE DATABASE IF NOT EXISTS {database}"
+            f"CREATE DATABASE IF NOT EXISTS {database} "
             f"CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
         )
         print(f"Database '{database}' is ready.")
