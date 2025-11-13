@@ -53,7 +53,7 @@ def seed_data():
                 if existing_user:
                     print(f"Skipping existing user: {user.email}")
                     continue
-                db.session.add(User)
+                db.session.add(user)
 
             db.session.commit()
             print("Database seeding completed successfully.")
