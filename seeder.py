@@ -37,7 +37,7 @@ def seed_data():
                 User(
                     FirstName="Jaecy",
                     LastName="De Vera",
-                    Username="Admin2",
+                    Username="Admin3",
                     email="jaecydevera36@gmail.com",
                     password=generate_password_hash("MasterPogi"),
                     Birthdate="2000-10-20",
