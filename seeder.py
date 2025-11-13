@@ -33,6 +33,18 @@ def seed_data():
                     Phone="09171234567",
                     Address="Makati City, Metropolitan Manila",
                     StudentID="2023-11763-MN-0"     
+                ),
+                User(
+                    FirstName="Jaecy",
+                    LastName="De Vera",
+                    Username="Admin2",
+                    email="jaecydevera36@gmail.com",
+                    password=generate_password_hash("MasterPogi"),
+                    Birthdate="2000-10-20",
+                    Gender="Male",
+                    Phone="09171234567",
+                    Address="Antipolo City, Rizal",
+                    StudentID="2023-10608-MN-0"
                 )
             ]
             
